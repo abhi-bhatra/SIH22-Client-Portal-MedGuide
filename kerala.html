@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for hospital..">
+
+<ul id="myUL">
+  <li class="myDIV"><a href="#">Aster Medcity</a></li>
+  <div class="hide">
+      <ul>
+          <li>General beds: 0</li>
+          <li>Oxygen beds: 38</li>
+          <li>ICU beds without ventilator: 0</li>
+          <li>ICU beds with ventilator: 0</li>
+      </ul>
+  </div>
+  <li class="myDIV"><a href="#">Rajagiri Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 0</li>
+        <li>Oxygen beds: 35</li>
+        <li>ICU beds with ventilator: 7</li>
+        <li>ICU beds without ventilator: 0</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">VPS Lakeshore Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 0</li>
+        <li>Oxygen beds: 15</li>
+        <li>ICU beds without ventilator: 2</li>
+        <li>ICU beds with ventilator: 8</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Aster MIMS Calicut</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 5</li>
+        <li>Oxygen beds: 11</li>
+        <li>ICU beds without ventilator: 11</li>
+        <li>ICU beds with ventilator: 4</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">KIMSHEALTH Hospital Trivandrum</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 23</li>
+        <li>Oxygen beds: 23</li>
+        <li>ICU beds without ventilator: 7</li>
+        <li>ICU beds with ventilator: 7</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Amrita Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 9</li>
+        <li>Oxygen beds: 12</li>
+        <li>ICU beds without ventilator: 6</li>
+        <li>ICU beds with ventilator: 1</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Lourdes Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 0</li>
+        <li>Oxygen beds: 4</li>
+        <li>ICU beds without vetilator: 5</li>
+        <li>ICU beds with ventilator: 5</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Sunrise Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 10</li>
+        <li>Oxygen beds: 14</li>
+        <li>ICU beds without vetilator: 15</li>
+        <li>ICU beds with ventilator: 5</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Kailash Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 0</li>
+        <li>Oxygen beds: 4</li>
+        <li>ICU beds without vetilator: 5</li>
+        <li>ICU beds with ventilator: 5</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Kailash Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 0</li>
+        <li>Oxygen beds: 4</li>
+        <li>ICU beds without vetilator: 5</li>
+        <li>ICU beds with ventilator: 5</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">City Nursingh Home</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 0</li>
+        <li>Oxygen beds: 4</li>
+        <li>ICU beds without vetilator: 5</li>
+        <li>ICU beds with ventilator: 5</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Star Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 23</li>
+        <li>Oxygen beds: 4</li>
+        <li>ICU beds without vetilator: 5</li>
+        <li>ICU beds with ventilator: 15</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Gupta Nursing Home</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 0</li>
+        <li>Oxygen beds: 4</li>
+        <li>ICU beds without vetilator: 5</li>
+        <li>ICU beds with ventilator: 5</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Diamond Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 23</li>
+        <li>Oxygen beds: 46</li>
+        <li>ICU beds without vetilator: 5</li>
+        <li>ICU beds with ventilator: 8</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Patel Hospital</a></li>
+  <div class="hide">
+    <ul>
+        <li>General beds: 23</li>
+        <li>Oxygen beds: 4</li>
+        <li>ICU beds without vetilator: 5</li>
+        <li>ICU beds with ventilator: 4</li>
+    </ul>
+  </div>
+</ul>
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+</body>
+</html>

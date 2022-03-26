@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospital</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-plus-circle'></i>
+      <span class="logo_name">MedGuide Panel</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="https://admin-sih.herokuapp.com/" class="active">
+          <!-- <i class='bx bx-grid-alt'></i> -->
+          <span class="links_name">Home</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <section class="home-section" id="jaipur">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" id="myInput" placeholder="Search for city.." onkeyup="myFunction()">
+        <i class='bx bx-search'></i>
+      </div>
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">-->
+        <span class="admin_name">Coding Connoisseurs</span>
+        <i class='bx bx-chevron-down'></i>
+      </div>
+    </nav>
+    <div class="home-content">
+      <ul id="myUL">
+        <li><a href="alwar.html">Alwar</a></li>
+        <li><a href="jaipur.html">Jaipur</a></li>
+        <li><a href="ajmer.html">Ajmer</a></li>
+
+        <li><a href="mumbai.html">Mumbai</a></li>
+        <li><a href="banglore.html">Banglore</a></li>
+        <li><a href="kerala.html">Kerala</a></li>
+        <li><a href="goa.html">Goa</a></li>
+        <li><a href="barmer.html">Barmer</a></li>
+        <li><a href="jodhpur.html">Jodhpur</a></li>
+        <li><a href="jaisalmer.html">Jaisalmer</a></li>
+        <li><a href="ahemdabad.html">Ahemdabad</a></li>
+        <li><a href="surat.html">Surat</a></li>
+        <li><a href="bikaner.html">Bikaner</a></li>
+      </ul>
+      
+    </div>
+
+  </section>
+
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for city..">
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

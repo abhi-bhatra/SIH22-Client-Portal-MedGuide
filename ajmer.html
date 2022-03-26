@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for hospital..">
+
+<ul id="myUL">
+  <li class="myDIV"><a href="#">MITTAL HOSPITAL and RESEARCH CENTRE</a></li>
+  <div class="hide">
+      <ul>
+        <li>General beds: 20</li>
+        <li>Oxygen beds: 30</li>
+        <li>ICU beds without ventilator: 2</li>
+        <li>ICU beds with ventilator: 0</li>
+      </ul>
+  </div>
+  <li class="myDIV"><a href="#">JLN medical college</a></li>
+  <div class="hide">
+    <ul>
+      <li>General beds: 20</li>
+      <li>Oxygen beds: 30</li>
+      <li>ICU beds without ventilator: 2</li>
+      <li>ICU beds with ventilator: 0</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Kshetrapal Multispeciality Hospital</a></li>
+  <div class="hide">
+    <ul>
+      <li>General beds: 0</li>
+      <li>Oxygen beds: 35</li>
+      <li>ICU beds without ventilator: 10</li>
+      <li>ICU beds with ventilator: 5</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">Nasirabad Hospital</a></li>
+  <div class="hide">
+    <ul>
+      <li>General beds: 10</li>
+      <li>Oxygen beds: 69</li>
+      <li>ICU beds without ventilator: 0</li>
+      <li>ICU beds with ventilator: 11</li>
+    </ul>
+  </div>
+  <li class="myDIV"><a href="#">St Francis Hospital</a></li>
+  <div class="hide">
+    <ul>
+      <li>General beds: 20</li>
+      <li>Oxygen beds: 20</li>
+      <li>ICU beds without ventilator: 8</li>
+      <li>ICU beds with ventilator: 2</li>
+    </ul>
+   </div>
+  <li class="myDIV"><a href="#">Govt District Hospital</a></li>
+  <div class="hide">
+    <ul>
+      <li>General beds: 40</li>
+      <li>Oxygen beds: 100</li>
+      <li>ICU beds without ventilator: 11</li>
+      <li>ICU beds with ventilator: 11</li>
+    </ul>
+   </div>
+  <li class="myDIV"><a href="#">AKH BEAWAR</a></li>
+  <div class="hide">
+    <ul>
+      <li>General beds: 15</li>
+      <li>Oxygen beds: 180</li>
+      <li>ICU beds without ventilator: 6</li>
+      <li>ICU beds with ventilator: 4</li>
+    </ul>
+   </div>
+</ul>
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+</body>
+</html>
